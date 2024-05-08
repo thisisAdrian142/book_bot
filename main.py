@@ -1,17 +1,18 @@
-import sys 
-
 def main():
-    with open(books/frankenstein.txt, 'r') as file:
-        file_contents = file.read()
+    book_path = "books/frankenstein.txt"
+    text = get_book_text(book_path)
+    num_words = get_num_words(text)
+    print(f"{num_words} words found in the document")
 
-def count_words():
-    with open(books/frankenstein.txt, 'r') as file:
-        file_contents = file.read()
-        count = 0
-        words = file_contents.split()
-        for words in file_contents:
-            count++
+def get_num_words(text):
+    words = text.split()
+    return len(words)
 
+def count_letter(text)):
+    convert = text.lower()
+    convert_no_duplicate = set(convert)
+    return count(convert_no_duplicate)
 
-if __name__ == "__main__":
-    sys.exit(main())
+def get_book_text(path):
+    with open(book_path) as file:
+        return file.read()
