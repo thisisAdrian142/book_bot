@@ -1,3 +1,6 @@
+## My attempt
+
+```
 def get_num_words(text):
     words = book_to_string.split()
     return len(words)
@@ -25,3 +28,5 @@ def main():
 def get_book_text(path):
     with open(book_path, 'r') as file:
         return file.read()
+
+```

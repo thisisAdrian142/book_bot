@@ -68,5 +68,4 @@ def get_book_text(path):
     with open(book_path) as file:
         return file.read()
 
-
 ```
