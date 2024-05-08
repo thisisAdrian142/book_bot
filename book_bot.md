@@ -1,4 +1,7 @@
-import sys 
+Attempt for 'Read file' & 'Count words' exercises
+
+```
+import sys
 
 def main():
     with open(books/frankenstein.txt, 'r') as file:
@@ -15,3 +18,6 @@ def count_words():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+```
