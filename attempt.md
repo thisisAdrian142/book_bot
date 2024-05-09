@@ -52,7 +52,6 @@ def main():
 
     print("--- End report ---")
 
-
 def get_num_words(text):
     words = text.split()
     return len(words)
@@ -87,4 +86,28 @@ def get_book_text(path):
 
 
 main()
+```
+
+---
+
+### Core use of chars_dicts_to_sorted_list
+
+#### convert a dictionary of character -> count into -> a sorted list of dictionaries.
+
+#### Output: return a list of dicitonaries, each contain a char & its freq, sort freq in ascending order.
+
+- Input variable: "num_chars_dict"
+- Set a list "[ ]"
+
+### Core use of get_char_dicts
+
+- Input the string
+- Set a library "{ }"
+- Convert all chars to lowercase -> iterate
+
+```
+if chars converted statement true:
+    -> increase the counr of the char stored in 'lowered' by 1.
+    <-> set_chars[lowered] += 1
+
 ```
