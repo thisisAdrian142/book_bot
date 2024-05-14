@@ -3,6 +3,11 @@ def count_words(text_string):
     words = text_string.split()
     return len(words)
 
+# special chars filter
+def filter(freq):
+    filter_freq = {key: value for key, value in freq.items() if key.isalpha()}
+    return filter_freq
+
 # letters count
 def letters_count(text_string):
     lowercase_words = text_string.lower()
@@ -13,7 +18,7 @@ def letters_count(text_string):
             freq[characters] += 1
         else: 
             freq[characters] = 1
-    return freq
+    return filter(freq)           
 
 # read the book
 def main():
@@ -35,8 +40,15 @@ def main():
 #        for qualified_char in no_num_chars:
 #            print(f"The ", qualified_char, "character was found many times")
         
-        for key, value in letters_count(text_string).items():
-            print(f"The ", key, "character was found", value, "times")
+#        for key, value in letters_count(text_string).items():
+#            print(f"The ", key, "character was found", value, "times")
+
+        freq_dict = letters_count(text_string)
+        sorted_dict = sorted(freq_dict.items(), key=lambda item: item[1], reverse=True)
+        for key, value in sorted_dict:
+            print(f"The '{key}' character was found {value} times ")
+
+        print("--- End report ---")
 
 main()
 
